@@ -5,6 +5,10 @@
 
 void print_cities(city *ptrs[NUM_CITIES], int N) {
   // TODO
+  for (int j = 0; j < N; j+=1){
+    printf("%s \n", ptrs[j]->name);
+    printf("%d \n", ptrs[j]->population);
+  }
 }
 
 int main(int argc, char * argv[]) {
@@ -32,7 +36,7 @@ int main(int argc, char * argv[]) {
 
   printf("Average City Name Length: %1.2f\n", compute_average(ptrs, get_city_string_length));
   // TODO implement and uncomment out this:
-  //printf("Average Population: %1.2f\n", compute_average(ptrs, get_city_population));
+  printf("Average Population: %1.2f\n", compute_average(ptrs, get_city_population));
 
   if(argc>1){
     char buffer[50];
